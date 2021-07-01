@@ -1,3 +1,20 @@
 English word: in turn is in proper order subsequence,succession
 
 TreeNode<K,V>(parent,left,right,prev,isRed)
+
+
+ 平衡二叉查找树 Balanced Binary Search Tree
+节点平衡因子,节点子节点高度差
+高度差不超过1就是平衡了
+
+B树 数据库 文件系统 可以超过2个子节点,左小于父小于右节点,完全平衡就是子节点距离根节点完全一个高度,父节点数据比子节点节点数少一个,数的高度矮
+B树和二叉搜索树等价可以互相转换
+
+Ceiling┌ ┐ 向上取整
+Floor  └ ┘  向下取整
+
+M阶B树意思是最多 某个M个子节点
+
+
+红黑树
+左旋右旋变色
