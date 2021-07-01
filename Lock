@@ -27,3 +27,15 @@ class Account {
     }
 
 }
+stock plan
+ref:https://segmentfault.com/a/1190000022596853
+redis incr command (itemId,num) StringRedisSerializer,expire time,if not exist select mysql and set redis item
+原子命令,安全性差需要lua脚本保证不超卖,性能好
+lua 脚本 保证原子性 ,单线程性能好
+
+Distribute Lock
+safe performance bad
+Redission,watch dog lock renewal,setnx ex ,value base itemId+requestId,only release by own thread 可重入,没抢到锁重试
+
+乐观锁
+update store set num = $num where id = $id and num = $query_num 版本号和Number道理一样
