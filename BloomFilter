@@ -9,3 +9,5 @@ just judge not exist ,dont judge must exist,judge by array index,delete diffcult
 
 jdk bit set  impl oom and persistence problem use redis bitmap
 redis 2^32-1=512MB ,scale for hash 200mill data,1/10thousand misjudge
+
+bit array selected,hash function selected
