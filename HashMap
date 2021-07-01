@@ -1,0 +1,61 @@
+keyWords:frequently used,easy to forget,interview
+refrece link:https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html,https://www.apiref.com/java11-zh/java.base/java/util/HashMap.html
+english words:hash is split one big to more small
+diff words: word binary is 2-system,aks BIN,the other word bin is container|box
+
+dispict:(key,value) avg o(1) to save and retrive 
+base concept: 
+  1.use array bucket to save
+  2.array element use list solve hash-conflict
+struction:
+  1.Node<k,v>(hash,key,value,Node<k,v>(next))
+    hashcode(Objects.hashCode(key) ^ Objects.hashCode(value);)
+    equal( if (o == this)
+                return true;
+            if (o instanceof Map.Entry) {
+                Map.Entry<?,?> e = (Map.Entry<?,?>)o;
+                if (Objects.equals(key, e.getKey()) &&
+                    Objects.equals(value, e.getValue()))
+                    return true;
+            }
+            return false;)
+  2.HashMap<k,v>(serialVersionUID,
+                DEFAULT_INITIAL_CAPACITY,
+                MAXIMUM_CAPACITY,
+                DEFAULT_LOAD_FACTOR,
+                TREEIFY_THRESHOLD,
+                UNTREEIFY_THRESHOLD,
+                MIN_TREEIFY_CAPACITY,Node<K,V>[] table,Set<Map.Entry<K,V>> entrySet,int size,transient int modCount,int threshold,final float loadFactor)
+method:
+  1.hash((key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16))
+  2.get((e = getNode(hash(key), key)) == null ? null : e.value)
+    getNode(first = tab[(n - 1) & hash],
+            if (first.hash == hash && // always check first node
+                ((k = first.key) == key || (key != null && key.equals(k)))),
+                 if (e.hash == hash &&
+                        ((k = e.key) == key || (key != null && key.equals(k)))))
+  3.put(putVal(hash(key), key, value, false, true);)
+    putVal(if table.size==0 init table ,
+            else if table[i = (n - 1) & hash]==null,put node over there,
+            else hashEqual,keyEqual replace
+            else hashEqual,keyNotEqual,append nextNode
+            else if nextNode hashEqual,keyEqual relace)
+  4.resize(++modCount;
+        if (++size > threshold)
+            resize();)
+  5.remove()
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
