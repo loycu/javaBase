@@ -1,0 +1,11 @@
+k hash function compute source to multi-bit,o(k),blacklist
+save memory and filter quick
+k about misjudgment rate ,less k turn out  misjudgement probability big
+judge url cache,filter email address,big collection common set
+
+just judge not exist ,dont judge must exist,judge by array index,delete diffcult
+
+1absolute repeat 2misjudgerepeat 
+
+jdk bit set  impl oom and persistence problem use redis bitmap
+redis 2^32-1=512MB ,scale for hash 200mill data,1/10thousand misjudge
