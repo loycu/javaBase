@@ -1,0 +1,29 @@
+DeadLock
+A transfer money to b,syn b transfer money to a
+for transaction,must obtain a&b resource lock
+if A thread obtain a lock,syn B thread obtain b lock
+A thread b lock but B obtain,
+B thread a lcok but Aobtain
+class Account {
+  double balance;
+
+  void withdraw(double amount){
+     balance -= amount;
+  } 
+
+  void deposit(double amount){
+     balance += amount;
+  } 
+
+   void transfer(Account from, Account to, double amount){
+        sync(from);
+        sync(to);
+
+        from.withdraw(amount);
+        to.deposit(amount);
+
+        release(to);
+        release(from);
+    }
+
+}
