@@ -44,6 +44,13 @@ method:
         if (++size > threshold)
             resize();)
   5.remove()
+  
+  真难受啊,访问不了
+  abstractList,模板方法重写equals hashcode,
+  string,integer同理,作为hashmapkey很安全,可以保证hashmap key唯一,取也能取出来
+  如果自己的对象也要重写hashcode保证hashmap唯一的存,保证这个key hashcode是相同的
+  equals同理也要重写,保证寸的时候不重复
+  
                         
                         
                         
