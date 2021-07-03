@@ -51,6 +51,8 @@ method:
   如果自己的对象也要重写hashcode保证hashmap唯一的存,保证这个key hashcode是相同的
   equals同理也要重写,保证寸的时候不重复
   
+  专门为了技术,测试一下
+  
                         
                         
                         
